@@ -66,7 +66,7 @@ cd xformers
 git submodule update --init --recursive
 pip install -r requirements.txt
 pip install -e .
-cd ../stable-diffusion
+cd ../stablediffusion
 ```
 Upon successful installation, the code will automatically default to [memory efficient attention](https://github.com/facebookresearch/xformers)
 for the self- and cross-attention layers in the U-Net and autoencoder.
@@ -172,13 +172,13 @@ and adapt the checkpoint and config paths accordingly.
 ![upscaling-x4](assets/stable-samples/upscaling/merged-dog.png)
 After [downloading the weights](https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler), run
 ```
-python scripts/gradio/inpainting.py scripts/gradio/superresolution.py configs/stable-diffusion/x4-upscaling.yaml <path-to-checkpoint>
+python scripts/gradio/superresolution.py configs/stable-diffusion/x4-upscaling.yaml <path-to-checkpoint>
 ```
 
 or
 
 ```
-streamlit run scripts/streamlit/superresolution.py -- configs/stable-diffusion/upscaling_x4.yaml <path-to-checkpoint>
+streamlit run scripts/streamlit/superresolution.py -- configs/stable-diffusion/x4-upscaling.yaml <path-to-checkpoint>
 ```
 
 for a Gradio or Streamlit demo of the text-guided x4 superresolution model.  
