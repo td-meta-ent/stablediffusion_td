@@ -122,7 +122,6 @@ def main():
         default=8,
         help="downsampling factor, most often 8 or 16",
     )
-
     parser.add_argument(
         "--n_samples",
         type=int,

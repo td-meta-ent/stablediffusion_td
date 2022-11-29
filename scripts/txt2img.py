@@ -213,7 +213,7 @@ def main(opt):
         prompt = opt.prompt
         assert prompt is not None
         data = [batch_size * [prompt]]
-
+ 
     else:
         print(f"reading prompts from {opt.from_file}")
         with open(opt.from_file, "r") as f:
